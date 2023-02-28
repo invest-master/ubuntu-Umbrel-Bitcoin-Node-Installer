@@ -1,35 +1,39 @@
-# Ubuntu Umbrel Bitcoin Node Installer
+# Installer Umbrel sur Ubuntu
 
-This is a simple script to download and execute the Umbrel Bitcoin Node install script from your GitHub account on an Ubuntu system.
+Ce script va installer Umbrel et Bitcoin Core sur un serveur Ubuntu propre.
 
-## Usage
+## Prérequis
 
-1. Open a terminal on your Ubuntu system.
+- Un serveur Ubuntu propre
+- Accès administrateur
 
-2. Download the script by running the following command: 
+## Installation
 
-    ```bash
-    wget https://raw.githubusercontent.com/invest-master/ubuntu-Umbrel-Bitcoin-Node-Installer/main/ubuntu-Umbrel-Bitcoin-Node-Installer.sh
-    ```
+1. Téléchargez le script d'installation :
 
-3. Make the script executable by running the following command:
+wget https://raw.githubusercontent.com/invest-master/ubuntu-Umbrel-Bitcoin-Node-Installer/main/ubuntu-Umbrel-Bitcoin-Node-Installer.sh
 
-    ```bash
-    chmod +x ubuntu-Umbrel-Bitcoin-Node-Installer.sh
-    ```
+2. Vérifiez l'intégrité du script :
 
-4. Run the script by running the following command:
+wget https://raw.githubusercontent.com/invest-master/ubuntu-Umbrel-Bitcoin-Node-Installer/main/ubuntu-Umbrel-Bitcoin-Node-Installer.sh.asc
+gpg --keyserver keyserver.ubuntu.com --recv-keys 7E3BA6A42621CE17F8104E161F38C96AEBA390DD
+gpg --verify ubuntu-Umbrel-Bitcoin-Node-Installer.sh.asc ubuntu-Umbrel-Bitcoin-Node-Installer.sh
 
-    ```bash
-    ./ubuntu-Umbrel-Bitcoin-Node-Installer.sh
-    ```
+3. Installez Umbrel et Bitcoin Core :
 
-## Notes
+chmod +x ubuntu-Umbrel-Bitcoin-Node-Installer.sh
+./ubuntu-Umbrel-Bitcoin-Node-Installer.sh
 
-- This script assumes that you have curl and wget installed on your Ubuntu system.
-- This script downloads and executes a script from your GitHub account. Make sure to verify that the script is legitimate before running it.
-- This script is provided as-is without any warranty or support. Use at your own risk.
+shell
+Copy code
 
-## License
+4. Suivez les instructions à l'écran pour configurer votre nœud Umbrel.
 
-[MIT](https://github.com/invest-master/ubuntu-Umbrel-Bitcoin-Node-Installer/blob/main/LICENSE)
+## Variables d'environnement
+
+Notez que vous devrez fournir les variables nécessaires telles que RPC_USER, RPC_PASSWORD, WALLET_NAME, NETWORK, CHAIN, BITCOIN_DATA_DIR, LND_DATA_DIR, NODE_PUBKEY, NODE_ADDRESS et CHANNEL_AMOUNT avant d'exécuter cette fonction.
+
+## Contact
+
+Pour toute question ou préoccupation, veuillez contacter invest-master à contact.investmaster@gmail.com.
+
