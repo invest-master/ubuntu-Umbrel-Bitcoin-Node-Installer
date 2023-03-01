@@ -34,7 +34,6 @@ mkdir ~/umbrel-install/.bitcoin
 
 
 -Naviguer jusqu'au dossier .bitcoin en tapant la commande suivante :
-bash
 
 cd ~/umbrel-install/.bitcoin
 
@@ -42,7 +41,7 @@ cd ~/umbrel-install/.bitcoin
 
 ls | grep bitcoin.conf
 
-Utilisez la commande nano pour créer et ouvrir le fichier bitcoin.conf dans le dossier .bitcoin :
+*Utilisez la commande nano pour créer et ouvrir le fichier `bitcoin`.conf dans le dossier `.bitcoin` :
 
 nano ~/umbrel-install/.bitcoin/bitcoin.conf
 
@@ -56,6 +55,55 @@ Assurez-vous de remplacer <nom d'utilisateur> et <mot de passe> par des valeurs 
 Une fois que vous avez ajouté tous les paramètres de configuration nécessaires, enregistrez le fichier en appuyant sur CTRL+X, suivi de Y, puis appuyez sur Entrée.
 
 Votre fichier bitcoin.conf est maintenant créé et prêt à être utilisé par votre portefeuille Bitcoin.
+
+⚠Si j'ai bien compris votre question, vous souhaitez récupérer la configuration que vous avez sauvée avant d'installer Umbrel, et l'utiliser avec la nouvelle installation de Bitcoin que vous avez effectuée avec Umbrel.
+
+Pour cela, vous pouvez suivre les étapes suivantes :
+
+Ouvrez le fichier texte contenant la configuration que vous avez sauvée avant d'installer Umbrel.
+
+Copiez le contenu de ce fichier.
+
+Ouvrez le fichier bitcoin.conf que vous avez créé dans le dossier ~/.bitcoin de votre installation Umbrel.
+
+Collez le contenu de la configuration que vous avez copié dans le fichier bitcoin.conf de votre installation Umbrel.
+
+Enregistrez le fichier bitcoin.conf avec les modifications que vous venez d'apporter.
+
+Ainsi, vous devriez pouvoir utiliser la même configuration que celle que vous aviez avant d'installer Umbrel. Cependant, veuillez bien vérifier que la configuration que vous avez sauvée avant est compatible avec la version de Bitcoin que vous utilisez actuellement avec Umbrel.⚠
+
+##version bitcoin
+
+Si bitcoind n'est pas installé, vous pouvez l'installer en utilisant la commande suivante:
+
+sudo apt-get update
+
+sudo apt-get install bitcoind
+
+Après l'installation, vous pouvez vérifier la version à l'aide de la commande:
+
+bitcoind --version
+
+Si vous avez déjà installé bitcoind mais il n'est pas trouvé, il est possible que le fichier exécutable ne soit pas dans le PATH de votre système. Dans ce cas, vous pouvez essayer de localiser le fichier exécutable à l'aide du which commande:
+
+which bitcoind
+
+Cette commande imprimera le chemin vers le bitcoind exécutable, et vous pouvez ajouter ce répertoire à votre PATH en modifiant votre ~/.bashrc déposer et ajouter la ligne suivante:
+
+export PATH=$PATH:/path/to/bitcoind/directory
+
+Après avoir enregistré le fichier, vous pouvez recharger le ~/.bashrc fichier en exécutant la commande:
+
+source ~/.bashrc
+
+Cela fera le bitcoind exécutable disponible dans votre terminal.
+
+
+
+
+
+
+
 
 ## Variables d'environnement
 
