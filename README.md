@@ -13,8 +13,9 @@ mkdir umbrel_install
 cd umbrel_install
 
 # Download Umbrel installer
--curl -L https://github.com/getumbrel/umbrel/raw/master/scripts/install > ubuntu-umbrel-bitcoin-node-installer.sh
--sudo bash ubuntu-umbrel-bitcoin-node-installer.sh
+*curl -L https://github.com/getumbrel/umbrel/raw/master/scripts/install > ubuntu-umbrel-bitcoin-node-installer.sh
+
+*sudo bash ubuntu-umbrel-bitcoin-node-installer.sh
 
 
 # Verify SHA256SUM
